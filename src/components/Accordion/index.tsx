@@ -1,11 +1,14 @@
-// RestrictedSection.tsx
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 import React, { useState } from 'react'
 
 type AccordionItemProps = {
-  title?: string
-  content?: string
+  title: string
+  content: string
+}
+
+type AccordionProps = {
+  items: AccordionItemProps[]
   className?: string
   width?: string
 }
@@ -13,26 +16,13 @@ type AccordionItemProps = {
 export const AccordionItem: React.FC<AccordionItemProps> = ({
   title,
   content,
-  className = '',
-  width = '700px',
 }) => {
   const [isExpanded, setIsExpanded] = useState(false)
   const toggleExpand = () => setIsExpanded(!isExpanded)
 
   return (
-    <div
-      className={classNames(
-        className,
-        'max-w-full p-6 border border-gray-300 rounded-lg mb-8',
-      )}
-      style={{ width }}
-    >
-      <div
-        className={classNames(
-          `flex justify-between items-center w-full`,
-          isExpanded && 'mb-4',
-        )}
-      >
+    <div className="max-w-full p-4 border-b border-gray-300 rounded-lg">
+      <div className={classNames(`flex justify-between items-center w-full`)}>
         <span className="font-semibold text-slate-700">{title}</span>
 
         <button
@@ -58,12 +48,26 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
 
       <div
         className={classNames(
-          'overflow-hidden transition-all duration-300 border-gray-300 border-t',
-          isExpanded ? 'max-h-40 opacity-100 mt-3 pt-4' : 'max-h-0 opacity-0',
+          'overflow-hidden transition-all duration-300',
+          isExpanded ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0',
         )}
       >
         <p className="text-slate-700 leading-6">{content}</p>
       </div>
+    </div>
+  )
+}
+
+export const Accordion: React.FC<AccordionProps> = ({
+  items,
+  className = '',
+  width = '700px',
+}) => {
+  return (
+    <div className={className} style={{ width }}>
+      {items.map((item, index) => (
+        <AccordionItem key={index} title={item.title} content={item.content} />
+      ))}
     </div>
   )
 }

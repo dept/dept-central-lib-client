@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react'
-import { AccordionItem } from '.'
+import { AccordionItem, Accordion } from '.'
 import '@testing-library/jest-dom/extend-expect'
 
 describe('AccordionItem Component', () => {
@@ -39,24 +39,19 @@ describe('AccordionItem Component', () => {
     expect(button).toHaveAttribute('aria-expanded', 'false')
     expect(contentContainer).toHaveClass('max-h-0', 'opacity-0')
   })
+})
 
-  it('applies custom width if provided', () => {
-    const { getByText } = render(
-      <AccordionItem title="Custom Width" content="Content" width="500px" />,
-    )
-    const container = getByText('Custom Width').parentElement?.parentElement
-    expect(container).toHaveStyle('width: 500px')
-  })
+describe('Accordion Component', () => {
+  it('renders multiple AccordionItem components', () => {
+    const items = [
+      { title: 'Item 1', content: 'Content 1' },
+      { title: 'Item 2', content: 'Content 2' },
+    ]
+    const { getByText } = render(<Accordion items={items} />)
 
-  it('renders custom className if provided', () => {
-    const { getByText } = render(
-      <AccordionItem
-        title="Class Test"
-        content="Content"
-        className="my-class"
-      />,
-    )
-    const container = getByText('Class Test').parentElement?.parentElement
-    expect(container).toHaveClass('my-class')
+    expect(getByText('Item 1')).toBeInTheDocument()
+    expect(getByText('Item 2')).toBeInTheDocument()
+    expect(getByText('Content 1').parentElement).toHaveClass('max-h-0')
+    expect(getByText('Content 2').parentElement).toHaveClass('max-h-0')
   })
 })
