@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 type AccordionItemProps = {
   title: string
-  content: string
+  content: React.ReactNode
 }
 
 type AccordionProps = {
@@ -21,9 +21,11 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   const toggleExpand = () => setIsExpanded(!isExpanded)
 
   return (
-    <div className="max-w-full p-4 border-b border-gray-300 rounded-lg">
+    <div className="max-w-full py-4 border-b border-gray-300">
       <div className={classNames(`flex justify-between items-center w-full`)}>
-        <span className="font-semibold text-slate-700">{title}</span>
+        <span className="font-semibold text-slate-700 cursor-pointer" onClick={toggleExpand}>
+          {title}
+        </span>
 
         <button
           onClick={toggleExpand}

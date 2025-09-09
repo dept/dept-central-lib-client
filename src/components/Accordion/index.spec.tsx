@@ -39,6 +39,27 @@ describe('AccordionItem Component', () => {
     expect(button).toHaveAttribute('aria-expanded', 'false')
     expect(contentContainer).toHaveClass('max-h-0', 'opacity-0')
   })
+
+  it('renders ReactNode content correctly', () => {
+    const { getByText } = render(
+      <AccordionItem
+        title="Node Title"
+        content={
+          <ul>
+            <li>Bullet 1</li>
+            <li>
+              <strong>Bold Bullet</strong>
+            </li>
+          </ul>
+        }
+      />,
+    )
+
+    expect(getByText('Node Title')).toBeInTheDocument()
+
+    expect(getByText('Bullet 1')).toBeInTheDocument()
+    expect(getByText('Bold Bullet')).toBeInTheDocument()
+  })
 })
 
 describe('Accordion Component', () => {

@@ -13,7 +13,7 @@ import { Accordion } from 'dept-central-lib-client'
 // Example usage
 const items = [
   { title: 'Accordion Title 1', content: 'This is the content for item 1.' },
-  { title: 'Accordion Title 2', content: 'This is the content for item 2.' },
+  { title: 'Another Accordion item', content: <strong>Content with bold text</strong> }
 ]
 
 <Accordion items={items} />
@@ -31,11 +31,11 @@ interface User {
 
 ## Props
 
-| Prop      | Type                                 | Description                                        | Default Value |
-| --------- | ------------------------------------ | -------------------------------------------------- | ------------- |
-| items     | { title: string; content: string }[] | Array of objects representing each accordion item. | -             |
-| className | string                               | Custom CSS className.                              | ""            |
-| width     | string                               | Specifies the card width.                          | "700px"       |
+| Prop      | Type                                          | Description                                        | Default Value |
+| --------- | --------------------------------------------- | -------------------------------------------------- | ------------- |
+| items     | { title: string; content: React.ReactNode }[] | Array of objects representing each accordion item. | -             |
+| className | string                                        | Custom CSS className.                              | ""            |
+| width     | string                                        | Specifies the card width.                          | "700px"       |
 
 ## Examples
 
@@ -72,6 +72,22 @@ interface User {
   width="100%"
   items={[
     { title: 'Wide Item', content: 'This accordion takes the full width.' },
+  ]}
+/>
+
+// Accordion with bullet list
+<Accordion
+  items={[
+    {
+      title: 'Checklist',
+      content: (
+        <ul className="list-disc pl-5">
+          <li>First point</li>
+          <li>Second point</li>
+          <li><strong>Important</strong> note</li>
+        </ul>
+      )
+    }
   ]}
 />
 ```
