@@ -17,9 +17,10 @@ export default {
   argTypes: {
     items: {
       control: 'object',
-      description: 'Array of accordion items with title and content',
+      description:
+        'Array of accordion items with title and content (string | ReactNode)',
       table: {
-        type: { summary: 'AccordionProps[]' },
+        type: { summary: '{ title: string; content: React.ReactNode }[]' },
       },
     },
     className: {
@@ -69,6 +70,66 @@ export const WithLongContent: Story = {
     docs: {
       source: {
         code: `<Accordion items={[{ title: 'Accordion with long content', content: 'Lorem ipsum...' }, { title: 'Another Item', content: 'Short content' }]} />`,
+      },
+    },
+  },
+}
+
+export const WithRichContent: Story = {
+  args: {
+    items: [
+      {
+        title: 'With bullet points',
+        content: (
+          <ul className="list-disc pl-5 text-slate-700">
+            <li>First point</li>
+            <li>Second point</li>
+            <li>
+              <strong>Highlighted</strong> point
+            </li>
+          </ul>
+        ),
+      },
+      {
+        title: 'With link',
+        content: (
+          <p>
+            Go to{' '}
+            <a href="https://example.com" className="text-blue-600 underline">
+              this page
+            </a>
+            .
+          </p>
+        ),
+      },
+    ],
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+          <Accordion
+            items={[
+              {
+                title: 'With bullet points',
+                content: (
+                  <ul className="list-disc pl-5">
+                    <li>First point</li>
+                    <li>Second point</li>
+                    <li><strong>Highlighted</strong> point</li>
+                  </ul>
+                )
+              },
+              {
+                title: 'With link',
+                content: (
+                  <p>
+                    Go to <a href="https://example.com">this page</a>.
+                  </p>
+                )
+              }
+            ]}
+          />`,
       },
     },
   },
