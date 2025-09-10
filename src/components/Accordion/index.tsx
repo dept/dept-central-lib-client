@@ -54,7 +54,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           isExpanded ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0',
         )}
       >
-        <p className="text-slate-700 leading-6">{content}</p>
+        <div className="text-slate-700 leading-6">{content}</div>
       </div>
     </div>
   )
