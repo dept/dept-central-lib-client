@@ -1,3 +1,4 @@
+@import "tailwindcss";
 /* button.module.css */
 
 @value buttonTextColor: white;
@@ -8,35 +9,49 @@
 }
 
 .solid {
-  @apply button bg-[--button-scheme] text-[--button-text-color];
+  background-color: var(--button-scheme);
+  color: var(--button-text-color);
+  composes: button;
 }
 
 .outline {
-  @apply button border !border-solid border-[--button-scheme] text-[--button-scheme];
+  border: 2px solid var(--button-scheme);
+  color: var(--button-scheme);
+  composes: button;
 }
 
 .link {
-  @apply button underline text-[--button-scheme] underline-offset-[0.5rem];
+  text-decoration: underline;
+  color: var(--button-scheme);
+  text-underline-offset: 0.5rem;
+  composes: button;
 }
 
 .solid:not(:disabled):hover {
-  @apply bg-[--button-hover-color] text-[buttonTextColor];
+  background-color: var(--button-hover-color);
+  color: var(--button-text-color);
 }
 
 .link:not(:disabled):hover {
-  @apply text-[--button-focus-color] decoration-2 decoration-[--button-hover-color];
+  color: var(--button-focus-color);
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--button-hover-color);
 }
 
 .outline:not(:disabled):hover {
-  @apply bg-[--button-scheme] text-[buttonTextColor];
+  background-color: var(--button-scheme);
+  color: var(--button-text-color);
 }
 
 :is(.solid, .outline):not(:disabled):focus {
-  @apply bg-[--button-focus-color] text-[buttonTextColor];
+  background-color: var(--button-focus-color);
+  color: var(--button-text-color);
 }
 
 .link:not(:disabled):focus {
-  @apply text-[--button-focus-color] decoration-2 decoration-[--button-focus-color];
+  color: var(--button-focus-color);
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--button-focus-color);
 }
 
 .disabled {

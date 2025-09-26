@@ -60,7 +60,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       <label className={styles.radio} style={radioStyles}>
         <input type="radio" ref={ref} {...rest} />
         {children && (
-          <span className="text-sm leading-6 text-gray-500">{children}</span>
+          <span className="text-sm leading-6 text-grayscale-500">{children}</span>
         )}
       </label>
     )

@@ -1,18 +1,20 @@
+@import "tailwindcss";
 .radio {
   @apply flex items-center gap-3 cursor-pointer select-none;
 }
 
 .radio input {
-  @apply w-5 h-5 flex-shrink-0 appearance-none border-[3px] border-white rounded-[50%] bg-white outline outline-2 outline-[--radio-initial-color];
+  @apply w-5 h-5 flex-shrink-0 appearance-none border-[3px] border-white rounded-[50%] bg-white outline outline-2;
+  outline-color: var(--radio-initial-color);
 }
 
 .radio input:checked {
-  @apply bg-[--radio-scheme];
+  background-color: var(--radio-scheme);
 }
 
 .radio input:checked,
 .radio input:enabled:hover {
-  @apply outline-[--radio-scheme];
+  outline-color: var(--radio-scheme);
 }
 
 .radio input:disabled,
@@ -21,7 +23,8 @@
 }
 
 .radio input:disabled {
-  @apply bg-[--radio-disabled-color] border-none;
+  @apply border-none;
+  background-color: var(--radio-disabled-color);
 }
 
 .label {

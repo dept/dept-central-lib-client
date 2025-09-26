@@ -133,9 +133,9 @@ export const Select: FC<SelectProps> = ({
           aria-labelledby="listbox-label"
           className={classNames(
             disabled ? 'cursor-not-allowed opacity-50' : 'pointer',
-            errorMessage ? 'border-2 border-[--select-error-color]' : '',
+            errorMessage ? 'border-2 border-[color:var(--select-error-color)]' : '',
             small ? 'py-2 px-3' : 'py-3 px-4',
-            'relative w-full bg-white border rounded-md shadow-sm text-left cursor-default focus:border-[--select-scheme] focus:border-2',
+            'relative w-full bg-white border border-[color:var(--color-grayscale-200)] rounded-md shadow-xs text-left cursor-default focus:border-[color:var(--select-scheme)] focus:border-2',
             typography.base,
           )}
           onClick={() => setOpen(!open)}
@@ -158,7 +158,7 @@ export const Select: FC<SelectProps> = ({
           >
             <Icon
               className={classNames(
-                open ? 'text-[--select-scheme]' : '',
+                open ? 'text-[color:var(--select-scheme)]' : '',
                 'h-6 w-6 text-black',
               )}
               aria-hidden="true"
@@ -212,7 +212,7 @@ export const Select: FC<SelectProps> = ({
                     {selected?.value === option.value && (
                       <span
                         className={classNames(
-                          'absolute inset-y-0 right-2 flex items-center text-[--select-scheme]',
+                          'absolute inset-y-0 right-2 flex items-center text-[color:var(--select-scheme)]',
                           small ? 'pr-2' : 'pr-4',
                         )}
                       >
@@ -236,7 +236,7 @@ export const Select: FC<SelectProps> = ({
       {errorMessage && (
         <small
           className={classNames(
-            'text-[--select-error-color]',
+            'text-[color:var(--select-error-color)]',
             typography.small,
           )}
         >

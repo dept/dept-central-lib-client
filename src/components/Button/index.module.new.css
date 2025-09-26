@@ -1,0 +1,16 @@
+@import "../../styles/utilities.css";
+
+.solid {
+  composes: button button-solid from "../../styles/utilities.css";
+  composes: largeBold from "../../styles/typography.module.css";
+}
+
+.outline {
+  composes: button button-outline from "../../styles/utilities.css";
+  composes: largeBold from "../../styles/typography.module.css";
+}
+
+.link {
+  composes: button button-link from "../../styles/utilities.css";
+  composes: largeBold from "../../styles/typography.module.css";
+}

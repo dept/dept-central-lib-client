@@ -99,12 +99,12 @@ export const Variants: Story = {
     docs: {
       source: {
         code: `<Button>Solid Button</Button>
-<Button variant="outline">
-  Outline Button
-</Button>
-<Button variant="link">
-  Link Button
-</Button>
+          <Button variant="outline">
+            Outline Button
+          </Button>
+          <Button variant="link">
+            Link Button
+          </Button>
           `,
       },
     },
@@ -131,10 +131,10 @@ export const Colors: Story = {
     docs: {
       source: {
         code: `<Button colorScheme="primary">Primary Button</Button>
-<Button colorScheme="grayscale">GrayScale Button</Button>
-<Button colorScheme="warning">Warning Button</Button>
-<Button colorScheme="error">Error Button</Button>
-<Button colorScheme="success">Success Button</Button>
+          <Button colorScheme="grayscale">GrayScale Button</Button>
+          <Button colorScheme="warning">Warning Button</Button>
+          <Button colorScheme="error">Error Button</Button>
+          <Button colorScheme="success">Success Button</Button>
           `,
       },
     },
