@@ -84,7 +84,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           styles.checkbox,
           styles[variant],
           isRequired
-            ? 'after:content-["*"] after:ml-0.5 after:text-red-500'
+            ? 'after:content-["*"] after:ml-0.5 after:text-error-500'
             : '',
         )}
         style={checkboxStyles}

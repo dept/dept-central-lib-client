@@ -81,7 +81,7 @@ export const WithRichContent: Story = {
       {
         title: 'With bullet points',
         content: (
-          <ul className="list-disc pl-5 text-slate-700">
+          <ul className="list-disc pl-5 text-grayscale-800">
             <li>First point</li>
             <li>Second point</li>
             <li>

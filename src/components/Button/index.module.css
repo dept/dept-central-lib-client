@@ -55,5 +55,7 @@
 }
 
 .disabled {
-  @apply bg-gray-200 text-gray-500 cursor-not-allowed;
+  background-color: var(--color-grayscale-200);
+  color: var(--color-grayscale-500);
+  @apply cursor-not-allowed;
 }

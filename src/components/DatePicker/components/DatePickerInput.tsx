@@ -40,7 +40,7 @@ export const DatePickerInput = ({
   return (
     <>
       <input
-        className={`relative bg-transparent block w-full outline-none text-gray-400 ${className}`}
+        className={`relative bg-transparent block w-full outline-none text-grayscale-400 ${className}`}
         style={style}
         type="text"
         onClick={onClick}

@@ -308,7 +308,7 @@ export const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
               htmlFor="datepicker"
               className={classNames(
                 isRequired
-                  ? 'after:content-["*"] after:ml-0.5 after:text-red-500'
+                  ? 'after:content-["*"] after:ml-0.5 after:text-error-500'
                   : '',
                 styles.label,
               )}
@@ -369,7 +369,7 @@ export const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
               </div>
             )}
             {hint && (
-              <span className="pt-1 fixed font-sans text-sm font-normal leading-[18px] tracking-[0.01em] text-left text-gray-500">
+              <span className="pt-1 fixed font-sans text-sm font-normal leading-[18px] tracking-[0.01em] text-left text-grayscale-500">
                 {hint}
               </span>
             )}

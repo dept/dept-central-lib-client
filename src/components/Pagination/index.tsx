@@ -106,7 +106,7 @@ export const Pagination: FC<PaginationProps> = ({
         onKeyDown={handleKeyDown}
         size={3}
       />
-      <span className="whitespace-nowrap text-gray-700">Items per page</span>
+      <span className="whitespace-nowrap text-grayscale-700">Items per page</span>
     </div>
   )
 
@@ -120,7 +120,7 @@ export const Pagination: FC<PaginationProps> = ({
       <button
         onClick={() => onPageChange(Math.max(1, currentPage - 1))}
         disabled={currentPage === 1}
-        className="inline-flex gap-1 items-center justify-center min-sm:w-20 h-6 sm:w-28 sm:h-8 rounded-full text-sm sm:text-base font-semibold cursor-pointer text-violet-700 hover:text-white bg-white hover:bg-indigo-500 border-violet-700 hover:border-transparent focus:outline-none disabled:cursor-not-allowed disabled:text-gray-400 disabled:bg-white disabled:border-gray-300"
+        className="inline-flex gap-1 items-center justify-center min-sm:w-20 h-6 sm:w-28 sm:h-8 rounded-full text-sm sm:text-base font-semibold cursor-pointer text-primary-700 hover:text-white bg-white hover:bg-indigo-500 border-primary-700 hover:border-transparent focus:outline-none disabled:cursor-not-allowed disabled:text-grayscale-400 disabled:bg-white disabled:border-grayscale-300"
       >
         <ArrowLeftIcon className="w-4 h-4" aria-hidden="true" />
         <span className="max-sm:hidden sm:inline">Previous</span>
@@ -131,7 +131,7 @@ export const Pagination: FC<PaginationProps> = ({
           typeof page === 'number' ? (
             <button
               key={index}
-              className={`w-8 h-8 sm:w-8 sm:h-8 flex items-center justify-center rounded-full text-xs sm:text-base font-semibold ${page === currentPage ? 'text-violet-700 bg-violet-200' : 'text-gray-700 hover:bg-indigo-100'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500`}
+              className={`w-8 h-8 sm:w-8 sm:h-8 flex items-center justify-center rounded-full text-xs sm:text-base font-semibold ${page === currentPage ? 'text-primary-700 bg-primary-200' : 'text-grayscale-700 hover:bg-indigo-100'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-700`}
               onClick={() => onPageChange(page)}
               disabled={page === currentPage}
             >
@@ -140,7 +140,7 @@ export const Pagination: FC<PaginationProps> = ({
           ) : (
             <span
               key={index}
-              className="text-gray-500 flex items-center justify-center text-xs sm:text-base"
+              className="text-grayscale-500 flex items-center justify-center text-xs sm:text-base"
             >
               ...
             </span>
@@ -153,7 +153,7 @@ export const Pagination: FC<PaginationProps> = ({
       <button
         onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
         disabled={currentPage === totalPages}
-        className="inline-flex items-center justify-center min-sm:w-20 h-6 sm:w-28 sm:h-8 rounded-full text-sm sm:text-base font-semibold cursor-pointer text-violet-700 hover:text-white bg-white hover:bg-indigo-500 border-violet-700 hover:border-transparent focus:outline-none disabled:cursor-not-allowed disabled:text-gray-400 disabled:bg-white disabled:border-gray-300"
+        className="inline-flex items-center justify-center min-sm:w-20 h-6 sm:w-28 sm:h-8 rounded-full text-sm sm:text-base font-semibold cursor-pointer text-primary-700 hover:text-white bg-white hover:bg-indigo-500 border-primary-700 hover:border-transparent focus:outline-none disabled:cursor-not-allowed disabled:text-grayscale-400 disabled:bg-white disabled:border-grayscale-300"
       >
         <span className="max-sm:hidden sm:inline">Next</span>
         <ArrowRightIcon className="w-4 h-4 ml-2" aria-hidden="true" />

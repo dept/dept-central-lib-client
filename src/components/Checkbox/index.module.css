@@ -22,7 +22,8 @@
 }
 
 .toggleSlider {
-  @apply w-10 h-6 bg-gray-400 rounded-full relative transition-colors ease-in duration-300;
+  @apply w-10 h-6 rounded-full relative transition-colors ease-in duration-300;
+  background-color: var(--color-grayscale-400);
 }
 
 .toggleSlider::before {

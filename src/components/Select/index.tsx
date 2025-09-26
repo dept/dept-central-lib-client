@@ -114,7 +114,7 @@ export const Select: FC<SelectProps> = ({
           className={classNames(
             disabled ? 'opacity-50' : '',
             isRequired
-              ? 'after:content-["*"] after:ml-0.5 after:text-red-500'
+              ? 'after:content-["*"] after:ml-0.5 after:text-error-500'
               : '',
             typography.smallBold,
           )}
@@ -180,7 +180,7 @@ export const Select: FC<SelectProps> = ({
                 role="listbox"
                 aria-labelledby="listbox-label"
                 className={classNames(
-                  'max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto sm:text-sm',
+                  'max-h-60 rounded-md py-1 text-base ring-1 ring-grayscale-200 ring-opacity-5 overflow-auto sm:text-sm',
                   typography.base,
                 )}
               >
@@ -192,9 +192,9 @@ export const Select: FC<SelectProps> = ({
                     tabIndex={0}
                     className={classNames(
                       selected?.value === option.value
-                        ? 'bg-gray-50'
-                        : 'text-gray-900',
-                      'cursor-default select-none relative py-2 pl-3 hover:bg-gray-100',
+                        ? 'bg-grayscale-50'
+                        : 'text-grayscale-900',
+                      'cursor-default select-none relative py-2 pl-3 hover:bg-grayscale-100',
                     )}
                     onClick={() => handleOnChange(option)}
                     onKeyDown={(key) =>
@@ -229,7 +229,7 @@ export const Select: FC<SelectProps> = ({
           )}
       </div>
       {hint && (
-        <span className="font-sans text-sm font-normal leading-[18px] tracking-[0.01em] text-left text-gray-500">
+        <span className="font-sans text-sm font-normal leading-[18px] tracking-[0.01em] text-left text-grayscale-500">
           {hint}
         </span>
       )}

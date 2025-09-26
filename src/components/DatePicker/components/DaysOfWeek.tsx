@@ -29,7 +29,7 @@ export const DaysOfWeek = () => {
       {daysOfWeek.map((day) => (
         <span
           key={day}
-          className="w-10 h-10 flex justify-center items-center text-center text-gray-900"
+          className="w-10 h-10 flex justify-center items-center text-center text-grayscale-900"
         >
           {day}
         </span>

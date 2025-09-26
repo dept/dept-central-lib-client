@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 .datepicker {
-  @apply border border-gray-300 rounded-md bg-white w-full h-[3rem];
+  @apply rounded-md bg-white w-full h-[3rem];
+  border: 1px solid var(--color-grayscale-300);
   composes: shadowXSmall from '../../styles/shadows.module.css';
 }
 
@@ -40,7 +41,7 @@
 }
 
 .disabled {
-  @apply border border-gray-300;
+  border: 1px solid var(--color-grayscale-300);
   background-color: var(--datepicker-disabled-color);
 }
 
