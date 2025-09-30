@@ -134,10 +134,10 @@ export const Select: FC<SelectProps> = ({
           className={classNames(
             disabled ? 'cursor-not-allowed opacity-50' : 'pointer',
             errorMessage
-              ? 'border-2 border-[color:var(--select-error-color)]'
+              ? 'border-2 border-[var(--select-error-color)]'
               : '',
             small ? 'py-2 px-3' : 'py-3 px-4',
-            'relative w-full bg-white border border-grayscale-200 rounded-md shadow-xs text-left cursor-default focus:border-[color:var(--select-scheme)] focus:border-2',
+            'relative w-full bg-white border rounded-md shadow-xs text-left cursor-default focus:border-[var(--select-scheme)] focus:border-2',
             typography.base,
           )}
           onClick={() => setOpen(!open)}
@@ -171,6 +171,7 @@ export const Select: FC<SelectProps> = ({
               style={{
                 width: triggerBounds?.width,
                 ...layerProps.style,
+                ...createSelectStyles(color, borderColor, errorColor),
               }}
               className="z-10 mt-1 w-full rounded-md bg-white shadow-lg"
             >
@@ -211,7 +212,7 @@ export const Select: FC<SelectProps> = ({
                     {selected?.value === option.value && (
                       <span
                         className={classNames(
-                          'absolute inset-y-0 right-2 flex items-center text-[color:var(--select-scheme)]',
+                          'absolute inset-y-0 right-2 flex items-center text-[var(--select-scheme)]',
                           small ? 'pr-2' : 'pr-4',
                         )}
                       >
@@ -235,7 +236,7 @@ export const Select: FC<SelectProps> = ({
       {errorMessage && (
         <small
           className={classNames(
-            'text-[color:var(--select-error-color)]',
+            'text-[var(--select-error-color)]',
             typography.small,
           )}
         >

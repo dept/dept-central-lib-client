@@ -163,13 +163,13 @@ export const DaySelector: FC<DaySelectorProps> = ({
             type="button"
             className={clx(
               'w-10 h-10 flex justify-center items-center transition-colors rounded-full',
-              'hover:bg-[color:var(--datepicker-hover-color)]',
+              'hover:bg-[var(--datepicker-hover-color)]',
               'disabled:cursor-not-allowed disabled:line-through disabled:hover:bg-transparent',
-              isInHoverRangeValue && 'bg-[color:var(--datepicker-hover-color)]',
+              isInHoverRangeValue && 'bg-[var(--datepicker-hover-color)]',
               isCurrentMonth ? 'text-grayscale-900' : 'text-grayscale-500',
-              isRangeItem && 'bg-[color:var(--datepicker-range-item-color)]',
-              isSelected && 'bg-[color:var(--datepicker-scheme)] !text-white',
-              isToday && 'border-[1.5px] border-[color:var(--datepicker-scheme)]',
+              isRangeItem && 'bg-[var(--datepicker-range-item-color)]',
+              isSelected && 'bg-[var(--datepicker-scheme)] !text-white',
+              isToday && 'border-[1.5px] border-[var(--datepicker-scheme)]',
             )}
             onClick={() => {
               isCurrentMonth && onSelectDate(day, isSecondCalendar)
