@@ -1,7 +1,7 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 .datepicker {
-  @apply rounded-md bg-white w-full h-[3rem];
+  @apply rounded-md bg-white w-full h-12;
   border: 1px solid var(--color-grayscale-300);
   composes: shadowXSmall from '../../styles/shadows.module.css';
 }
@@ -12,7 +12,7 @@
 }
 
 .datepickerInput {
-  @apply min-w-[18rem] h-[3rem] px-4 py-3;
+  @apply min-w-[18rem] h-12 px-4 py-3;
 }
 
 .datePickerModal {

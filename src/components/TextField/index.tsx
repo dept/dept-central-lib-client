@@ -115,7 +115,7 @@ export const TextField = forwardRef<
     )
     const textFieldClasses = `${styles.textField} ${
       errorMessage ? styles.error : ''
-    } ${disabled ? styles.disabled : ''} ${readOnly ? styles.readOnly : ''} ${isMultiLine ? 'min-h-[3rem]' : 'max-h-[3rem]'}`.trim()
+    } ${disabled ? styles.disabled : ''} ${readOnly ? styles.readOnly : ''} ${isMultiLine ? 'min-h-12' : 'max-h-12'}`.trim()
 
     return (
       <div className="flex flex-col items-start gap-2 w-full">

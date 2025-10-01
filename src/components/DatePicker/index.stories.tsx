@@ -105,7 +105,7 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div className="pb-[22rem]">{Story()}</div>],
+  decorators: [(Story) => <div className="pb-88">{Story()}</div>],
   parameters: {
     docs: {
       toc: {

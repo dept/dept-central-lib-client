@@ -57,7 +57,7 @@ export const Tooltip: FC<TooltipProps> = ({
               {...layerProps}
               style={{ maxWidth, ...layerProps.style }}
               className={cn(
-                'bg-[#344054] text-white px-3 py-2 text-sm rounded shadow-lg',
+                'bg-grayscale-700 text-white px-3 py-2 text-sm rounded shadow-lg',
                 className,
               )}
               variants={variants}

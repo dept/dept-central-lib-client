@@ -61,7 +61,7 @@ export const PopOver: FC<PopOverProps> = ({
               animate="open"
               exit="closed"
               className={classNames(
-                'border-[1px] rounded-md bg-white',
+                'border rounded-md bg-white',
                 className,
               )}
             >

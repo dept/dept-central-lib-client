@@ -134,10 +134,10 @@ export const Select: FC<SelectProps> = ({
           className={classNames(
             disabled ? 'cursor-not-allowed opacity-50' : 'pointer',
             errorMessage
-              ? 'border-2 border-[var(--select-error-color)]'
+              ? 'border-2 border-(--select-error-color)'
               : '',
             small ? 'py-2 px-3' : 'py-3 px-4',
-            'relative w-full bg-white border rounded-md shadow-xs text-left cursor-default focus:border-[var(--select-scheme)] focus:border-2',
+            'relative w-full bg-white border rounded-md shadow-xs text-left cursor-default focus:border-(--select-scheme) focus:border-2',
             typography.base,
           )}
           onClick={() => setOpen(!open)}
@@ -212,7 +212,7 @@ export const Select: FC<SelectProps> = ({
                     {selected?.value === option.value && (
                       <span
                         className={classNames(
-                          'absolute inset-y-0 right-2 flex items-center text-[var(--select-scheme)]',
+                          'absolute inset-y-0 right-2 flex items-center text-(--select-scheme)',
                           small ? 'pr-2' : 'pr-4',
                         )}
                       >
@@ -236,7 +236,7 @@ export const Select: FC<SelectProps> = ({
       {errorMessage && (
         <small
           className={classNames(
-            'text-[var(--select-error-color)]',
+            'text-(--select-error-color)',
             typography.small,
           )}
         >

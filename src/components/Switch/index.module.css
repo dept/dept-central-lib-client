@@ -1,8 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 /* Switch.module.css */
 
 .switch {
-  @apply flex h-10 w-[14.625rem];
+  @apply flex h-10 w-58.5;
 }
 
 .button {
