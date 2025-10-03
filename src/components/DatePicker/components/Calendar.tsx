@@ -54,10 +54,10 @@ export const Calendar: FC<CalendarProps> = ({
 
   return (
     <div className="p-4 w-max">
-      <div className="flex items-center text-gray-500 mb-2">
+      <div className="flex items-center text-grayscale-500 mb-2">
         {!isRange && (
           <button onClick={handlePreviousMonth}>
-            <ChevronLeftIcon className="w-4 h-4 stroke stroke-gray-300" />
+            <ChevronLeftIcon className="w-4 h-4 stroke stroke-grayscale-300" />
           </button>
         )}
 
@@ -73,7 +73,7 @@ export const Calendar: FC<CalendarProps> = ({
         </div>
         {!isRange && (
           <button onClick={handleNextMonth}>
-            <ChevronRightIcon className="w-4 h-4 stroke stroke-gray-300" />
+            <ChevronRightIcon className="w-4 h-4 stroke stroke-grayscale-300" />
           </button>
         )}
       </div>

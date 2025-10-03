@@ -1,18 +1,20 @@
+@import "tailwindcss";
 .checkbox {
   @apply flex items-center cursor-pointer select-none;
 }
 
 .checkbox input {
-  @apply w-5 h-5 flex-shrink-0 appearance-none border-2 border-[--checkbox-initial-color] rounded bg-white;
+  @apply w-5 h-5 flex-shrink-0 appearance-none rounded bg-white;
+  border: 2px solid var(--checkbox-initial-color);
 }
 
 .checkbox input:checked {
-  @apply accent-[--checkbox-scheme];
+  accent-color: var(--checkbox-scheme);
   appearance: auto;
 }
 
 .checkbox input:enabled:hover {
-  @apply border-[--checkbox-scheme];
+  border-color: var(--checkbox-scheme);
 }
 
 .toggle input {
@@ -20,19 +22,21 @@
 }
 
 .toggleSlider {
-  @apply w-10 h-6 bg-gray-400 rounded-full relative transition-colors ease-in duration-300;
+  @apply w-10 h-6 rounded-full relative transition-colors ease-in duration-300;
+  background-color: var(--color-grayscale-400);
 }
 
 .toggleSlider::before {
-  @apply content-[''] w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition transform ease-in duration-300;
+  @apply w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition transform ease-in duration-300;
+  content: '';
 }
 
 .toggle input:checked + .toggleSlider {
-  @apply bg-[--checkbox-scheme];
+  background-color: var(--checkbox-scheme);
 }
 
 .toggle input:checked + .toggleSlider::before {
-  @apply translate-x-[1rem];
+  @apply translate-x-4;
 }
 
 .checkbox input:disabled,
@@ -41,7 +45,7 @@
 }
 
 .checkbox input:disabled {
-  @apply bg-[--checkbox-disabled-color];
+  background-color: var(--checkbox-disabled-color);
 }
 
 .label {

@@ -41,9 +41,9 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
                 return (
                   <th
                     key={`header-${index}`}
-                    className="px-4 py-3 border-b border-b-gray-200 text-left text-nowrap"
+                    className="px-4 py-3 border-b border-b-grayscale-200 text-left whitespace-nowrap"
                   >
-                    <span className="text-gray-500 font-normal ">{header}</span>
+                    <span className="text-grayscale-500 font-normal ">{header}</span>
                   </th>
                 )
               })}
@@ -60,7 +60,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
                 key={`tr-item-${index}`}
                 {...(onClick && { onClick })}
                 className={cn(
-                  'border-b border-b-gray-200 hover:bg-violet-50 transition-colors',
+                  'border-b border-b-grayscale-200 hover:bg-primary-50 transition-colors',
                   onClick && 'cursor-pointer',
                   className,
                 )}

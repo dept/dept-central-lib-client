@@ -1,71 +1,72 @@
+@import "tailwindcss";
 .pending {
-  @apply bg-warning-100;
+  background-color: var(--color-warning-100);
 }
 
 .dot-pending {
-  @apply bg-warning-500;
+  background-color: var(--color-warning-500);
 }
 
 .text-pending {
-  @apply text-warning-700;
+  color: var(--color-warning-700);
 }
 
 .approved {
-  @apply bg-success-100;
+  background-color: var(--color-success-100);
 }
 
 .dot-approved {
-  @apply bg-success-500;
+  background-color: var(--color-success-500);
 }
 
 .text-approved {
-  @apply text-success-700;
+  color: var(--color-success-700);
 }
 
 .denied {
-  @apply bg-error-100;
+  background-color: var(--color-error-100);
 }
 
 .dot-denied {
-  @apply bg-error-500;
+  background-color: var(--color-error-500);
 }
 
 .text-denied {
-  @apply text-error-700;
+  color: var(--color-error-700);
 }
 
 .reminded {
-  @apply bg-error-100;
+  background-color: var(--color-error-100);
 }
 
 .dot-reminded {
-  @apply bg-error-500;
+  background-color: var(--color-error-500);
 }
 
 .text-reminded {
-  @apply text-error-700;
+  color: var(--color-error-700);
 }
 
 .archived {
-  @apply bg-grayscale-200;
+  background-color: var(--color-grayscale-200);
 }
 
 .dot-archived {
-  @apply bg-grayscale-500;
+  background-color: var(--color-grayscale-500);
 }
 
 .text-archived {
-  @apply text-grayscale-700;
+  color: var(--color-grayscale-700);
 }
 
 .resolved {
-  @apply bg-success-100;
+  background-color: var(--color-success-100);
 }
 
 .dot-resolved {
-  @apply bg-success-500;
+  background-color: var(--color-success-500);
 }
 
 .text-resolved {
-  @apply text-success-700;
+  color: var(--color-success-700);
 }

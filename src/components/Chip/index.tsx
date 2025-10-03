@@ -41,7 +41,7 @@ export const Chip: FC<ChipProps> = ({
         variantClasses[variant],
       )}
     >
-      <span className="mt-0.5">{label}</span>
+      <span>{label}</span>
       {icon ? <span>{icon}</span> : null}
     </button>
   )

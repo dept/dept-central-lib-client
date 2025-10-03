@@ -132,7 +132,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         >
           <MagnifyingGlassIcon
             className={classNames(
-              !disabled ? 'text-[--search-scheme]' : 'opacity-50',
+              !disabled ? 'text-(--search-scheme)' : 'opacity-50',
               'absolute left-3 top-3 h-6 w-6',
             )}
             aria-hidden="true"
@@ -144,7 +144,8 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             name="search"
             className={classNames(
               disabled ? 'cursor-not-allowed' : '',
-              'block w-full h-[3rem] rounded-md focus:outline-none focus:border-[--search-border-color] text-grayscale-500 placeholder-grayscale-500 py-4 pr-4 pl-12 gap-3 shadow  group-hover:shadow-md disabled:cursor-not-allowed',
+              disabled ? '' : 'bg-white',
+              'block w-full h-12 rounded-md focus:outline-none focus:border-(--search-border-color) text-grayscale-500 placeholder-grayscale-500 py-4 pr-4 pl-12 gap-3 shadow  group-hover:shadow-md disabled:cursor-not-allowed',
             )}
             placeholder={placeholder}
             disabled={disabled}

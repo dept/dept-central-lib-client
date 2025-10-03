@@ -29,7 +29,25 @@ module.exports = (_env, argv) => {
           exclude: /node_modules/,
         },
         {
+          test: /\.module\.css$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  localIdentName: isProduction ? '[hash:base64]' : '[name]__[local]__[hash:base64:5]',
+                  exportLocalsConvention: 'camelCase',
+                },
+                importLoaders: 1,
+              },
+            },
+            'postcss-loader',
+          ],
+        },
+        {
           test: /\.css$/,
+          exclude: /\.module\.css$/,
           use: [
             MiniCssExtractPlugin.loader,
             'css-loader',

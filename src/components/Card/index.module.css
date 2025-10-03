@@ -1,11 +1,14 @@
+@import "tailwindcss";
 /* card.module.css */
 .card {
-  @apply flex flex-col items-start w-full min-w-fit bg-white border border-gray-200 rounded-2xl;
+  @apply flex flex-col items-start w-full min-w-fit bg-white rounded-2xl;
+  border: 1px solid var(--color-grayscale-200);
 }
 
 .header {
   composes: h4 from '../../styles/typography.module.css';
-  @apply flex p-8 items-center gap-4 self-stretch border-b border-b-gray-200;
+  @apply flex p-8 items-center gap-4 self-stretch;
+  border-bottom: 1px solid var(--color-grayscale-200);
 }
 
 .body {

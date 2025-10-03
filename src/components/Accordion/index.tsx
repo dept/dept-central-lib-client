@@ -21,9 +21,9 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   const toggleExpand = () => setIsExpanded(!isExpanded)
 
   return (
-    <div className="max-w-full py-4 border-b border-gray-300">
+    <div className="max-w-full py-4 border-b border-grayscale-300">
       <div className={classNames(`flex justify-between items-center w-full`)}>
-        <span className="font-semibold text-slate-700 cursor-pointer" onClick={toggleExpand}>
+        <span className="font-semibold text-grayscale-800 cursor-pointer" onClick={toggleExpand}>
           {title}
         </span>
 
@@ -54,7 +54,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           isExpanded ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0',
         )}
       >
-        <div className="text-slate-700 leading-6">{content}</div>
+        <div className="text-grayscale-800 leading-6">{content}</div>
       </div>
     </div>
   )

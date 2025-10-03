@@ -1,40 +1,48 @@
+@import 'tailwindcss';
+
 .datepicker {
-  @apply border rounded-md bg-white w-full h-[3rem];
+  @apply rounded-md bg-white w-full h-12;
+  border: 1px solid var(--color-grayscale-300);
   composes: shadowXSmall from '../../styles/shadows.module.css';
 }
 
 .datepicker:focus-within {
-  @apply border-2 border-[--datepicker-scheme];
+  @apply border-2;
+  border-color: var(--datepicker-scheme);
 }
 
 .datepickerInput {
-  @apply min-w-[18rem] h-[3rem] px-4 py-3;
+  @apply min-w-[18rem] h-12 px-4 py-3;
 }
 
 .datePickerModal {
-  @apply absolute z-10 mt-1 flex flex-col bg-white border shadow-lg rounded-xl items-center overflow-y-auto lg:flex-row;
+  @apply absolute z-10 mt-1 flex flex-col bg-white shadow-lg rounded-xl items-center overflow-y-auto lg:flex-row;
+  border: 1px solid var(--color-grayscale-300);
   composes: smallBold from '../../styles/typography.module.css';
 }
 
 .calendar {
-  @apply z-10 mt-1 flex flex-col bg-white border rounded-xl items-center overflow-y-auto lg:flex-row;
+  @apply z-10 mt-1 flex flex-col bg-white rounded-xl items-center overflow-y-auto lg:flex-row;
+  border: 1px solid var(--color-grayscale-300);
   composes: smallBold from '../../styles/typography.module.css';
 }
 
 .selected {
-  @apply bg-[--datepicker-scheme] text-white;
+  @apply text-white;
+  background-color: var(--datepicker-scheme);
 }
 
 .selectedHover {
-  @apply bg-[--datepicker-selected-hover-color];
+  background-color: var(--datepicker-selected-hover-color);
 }
 
 .hovered {
-  @apply bg-[--datepicker-hover-color];
+  background-color: var(--datepicker-hover-color);
 }
 
 .disabled {
-  @apply bg-[--datepicker-disabled-color] border border-gray-300;
+  border: 1px solid var(--color-grayscale-300);
+  background-color: var(--datepicker-disabled-color);
 }
 
 .datepickerInput:disabled,
@@ -47,10 +55,11 @@
 }
 
 .error {
-  @apply border-2 border-[--datepicker-error-color];
+  @apply border-2;
+  border-color: var(--datepicker-error-color);
 }
 
 .errorMessage {
-  @apply text-[--datepicker-error-color];
+  color: var(--datepicker-error-color);
   composes: small from '../../styles/typography.module.css';
 }

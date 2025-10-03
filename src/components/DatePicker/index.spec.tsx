@@ -82,7 +82,7 @@ describe('Test DatePicker component', () => {
       .getAllByRole('button', {
         name: `${today.getDate()}`,
       })
-      .find((item) => !item.classList.contains('text-gray-400'))
+      .find((item) => !item.classList.contains('text-grayscale-400'))
 
     fireEvent.click(currentDayButton!)
 
@@ -101,7 +101,7 @@ describe('Test DatePicker component', () => {
     );
     const hintElement = screen.getByText(hintMessage);
     expect(hintElement).toBeInTheDocument();
-    expect(hintElement).toHaveClass('text-gray-500');
+    expect(hintElement).toHaveClass('text-grayscale-500');
   });
 
   it('does not display hint text when the hint prop is not provided', () => {
