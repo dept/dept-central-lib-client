@@ -79,3 +79,46 @@ export const WithRowProps: Story = {
     },
   },
 }
+
+export const SortableHeaders: Story = {
+  args: {
+    head: {
+      headers: ['Type', 'Date', 'Used days', 'Description', 'Status'],
+      sortableHeaders: [true, true, true, false, false],
+      onSortChange: (columnIndex, direction) => {
+        console.log(`Column ${columnIndex} sorted ${direction}`)
+      },
+    },
+    body: {
+      bodyComponent: [
+        {
+          data: [
+            'Vacation',
+            '06/01/2024 - 13/01/2024',
+            '6 days',
+            'Family trip 🏔️👨‍👩‍👦',
+            'APPROVED',
+          ],
+        },
+        {
+          data: [
+            'Sick Leave',
+            '15/02/2024 - 16/02/2024',
+            '2 days',
+            'Flu recovery 🤒',
+            'PENDING',
+          ],
+        },
+        {
+          data: [
+            'Work From Home',
+            '20/03/2024',
+            '1 day',
+            'Project deadline',
+            'APPROVED',
+          ],
+        },
+      ],
+    },
+  },
+}
