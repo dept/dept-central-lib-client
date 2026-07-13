@@ -1,13 +1,17 @@
 name: Semantic release
 
 on: push
+permissions:
+  contents: write
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: 20.11.0
       - name: Install dependencies
