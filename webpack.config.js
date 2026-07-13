@@ -12,6 +12,8 @@ module.exports = (_env, argv) => {
     externals: {
       react: 'react',
       'react-dom': 'react-dom',
+      'react/jsx-runtime': 'react/jsx-runtime',
+      'react/jsx-dev-runtime': 'react/jsx-dev-runtime',
     },
     output: {
       path: path.resolve(__dirname, 'dist'),

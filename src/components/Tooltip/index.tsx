@@ -67,7 +67,13 @@ export const Tooltip: FC<TooltipProps> = ({
               transition={{ duration: 0.1 }}
             >
               {textComponent}
-              <Arrow {...arrowProps} backgroundColor="#344054" size={6} />
+              {/* react-laag@2.0.5 ships React 17-era SVG prop types that don't
+                  satisfy @types/react >=18.3; cast past the external mistype. */}
+              <Arrow
+                {...(arrowProps as React.ComponentProps<typeof Arrow>)}
+                backgroundColor="#344054"
+                size={6}
+              />
             </motion.div>
           )}
         </AnimatePresence>,
