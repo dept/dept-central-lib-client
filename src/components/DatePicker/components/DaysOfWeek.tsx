@@ -6,20 +6,14 @@ export const DaysOfWeek = () => {
 
   const getDaysOfWeekByLocale = (): string[] => {
     const locale = getLocale(state.language)
-    const daysOfWeek: string[] = []
     const formatter = new Intl.DateTimeFormat(locale, { weekday: 'short' })
-    const currentYear = new Date().getUTCFullYear()
 
-    for (let i = 0; i < 7; i++) {
-      const day = new Date(Date.UTC(currentYear, 0, 0))
-      day.setUTCDate(day.getUTCDate() + i)
-
-      const dayOfWeek = formatter.format(day)
-
-      daysOfWeek.push(dayOfWeek)
-    }
-
-    return daysOfWeek
+    // Monday-first, matching the day grid in DaySelector.
+    // Anchor on a known Monday (2024-01-01) in local time to avoid a
+    // UTC-construct + local-format day shift in negative-offset timezones.
+    return Array.from({ length: 7 }, (_, i) =>
+      formatter.format(new Date(2024, 0, 1 + i)),
+    )
   }
 
   const daysOfWeek = getDaysOfWeekByLocale()

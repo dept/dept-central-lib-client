@@ -91,6 +91,22 @@ describe('Test DatePicker component', () => {
     expect(selectedDate.getTime()).toBeLessThanOrEqual(maxDate.getTime())
   })
 
+  it('renders weekday headers Monday-first, aligned with the day grid', () => {
+    render(<DatePicker />)
+    fireEvent.click(screen.getByRole<HTMLInputElement>('textbox'))
+
+    const headers = screen.getAllByText(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)$/)
+    expect(headers.map((h) => h.textContent)).toEqual([
+      'Mon',
+      'Tue',
+      'Wed',
+      'Thu',
+      'Fri',
+      'Sat',
+      'Sun',
+    ])
+  })
+
   it('displays hint text when the hint prop is provided', () => {
     const hintMessage = "This is a hint for the date picker";
     render(
