@@ -1,6 +1,10 @@
 # Ignore build output
 build/
 dist/
+storybook-static/
+
+# Ignore packed tarballs produced by `npm pack`
+*.tgz
 
 # Ignore Node.js dependencies
 node_modules/
