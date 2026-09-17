@@ -2,17 +2,17 @@ import { ColorPalette } from '../types'
 
 export const colors: ColorPalette = {
   primary: {
-    25: '#F8F6FF',
-    50: '#EAE5FE',
-    100: '#DBD3FE',
-    200: '#CDC1FE',
-    300: '#BFB0FD',
-    400: '#B09EFD',
-    500: '#A28DFC',
-    600: '#704FFB',
-    700: '#5B40CB',
-    800: '#422F94',
-    900: '#2B1F61',
+    25: '#FFF5F3',
+    50: '#FFEBE7',
+    100: '#FFD9D2',
+    200: '#FFBEB6',
+    300: '#FF9D90',
+    400: '#FF6B3D',
+    500: '#FF5A1A',
+    600: '#FF4901',
+    700: '#E63A11',
+    800: '#CD2A18',
+    900: '#A11F12',
   },
   grayscale: {
     25: '#FCFCFD',
