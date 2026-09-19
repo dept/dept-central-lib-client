@@ -1,5 +1,6 @@
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
+import { colors } from '../../constants/theme'
 import React, { useState } from 'react'
 
 type AccordionItemProps = {
@@ -36,13 +37,13 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
             <ChevronUpIcon
               className="w-6 h-6 cursor-pointer"
               strokeWidth={2}
-              stroke={'#704FFB'}
+              stroke={colors.primary[800]}
             />
           ) : (
             <ChevronDownIcon
               className="w-6 h-6 cursor-pointer"
               strokeWidth={2}
-              stroke={'#704FFB'}
+              stroke={colors.primary[800]}
             />
           )}
         </button>
