@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/deptagency-dar/dept-central-lib-client"
+    "url": "https://github.com/dept/dept-central-lib-client"
   },
   "keywords": [
     "react",
@@ -93,7 +93,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.1",
-    "semantic-release": "^23.0.2",
+    "semantic-release": "^25.0.9",
     "storybook": "^7.2.2",
     "tailwindcss": "^4.1.14",
     "ts-jest": "^29.1.1",
